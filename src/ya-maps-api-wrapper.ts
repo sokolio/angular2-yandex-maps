@@ -108,6 +108,8 @@ export class YaMapsAPIWrapper {
             });
 
             const clusterer = new ymaps.Clusterer({});
+            if(claster.disableClickZoom)
+                clusterer.clusterDisableClickZoom = claster.disableClickZoom;                                                             
             clusterer.add(myGeoObjects);
             map.geoObjects.add(clusterer);
 
