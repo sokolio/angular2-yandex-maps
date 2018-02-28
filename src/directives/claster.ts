@@ -19,6 +19,7 @@ let clasterId = 0;
 // tslint:disable-next-line:directive-class-suffix
 export class YaClaster implements OnChanges, OnDestroy {
     @Input() public markers: any[];
+    @Input() public disableClickZoom : boolean = false;
 
     private _id: string;
     private _markerAddedToManger: boolean = false;
